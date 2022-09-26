@@ -50,7 +50,7 @@ namespace ConsoleUI
             #endregion            
             Console.ReadLine();
 
-            
+            List<Vehicle> vehicles = new List<Vehicle>();
         }
     }
 }

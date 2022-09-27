@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -49,7 +50,6 @@ namespace ConsoleUI
             // Call each of the drive methods for one car and one motorcycle
 
             #endregion            
-            Console.ReadLine();
 
             List<Vehicle> vehicles = new List<Vehicle>();
 
@@ -57,6 +57,30 @@ namespace ConsoleUI
             Motorcycle motorcycle1 = new Motorcycle() { Make = "Harley-Davidson", Model = "Softail Standard", Year = 2015, Type = "Cruiser" };
             Vehicle car2 = new Car() { Make = "Ford", Model = "F-150", Year = 2008, Doors = 4 };
             Vehicle motorcycle2 = new Motorcycle() { Make = "Honda", Model = "CRF250F", Year = 2020, Type = "Off-road" };
+
+            vehicles.Add(car1);
+            vehicles.Add(car2);
+            vehicles.Add(motorcycle1);
+            vehicles.Add(motorcycle2);
+
+            foreach (var vehicle in vehicles)
+            {
+                Console.Write($"The {vehicle.Year} {vehicle.Make} {vehicle.Model} ");
+                if (vehicle is Car)
+                {
+                    Car v = vehicle as Car;
+                    Console.WriteLine($"has {v.Doors} doors.\n");
+                }
+                else if (vehicle is Motorcycle)
+                {
+                    Motorcycle m = vehicle as Motorcycle;
+                    string vowels = "aeiou";
+                    string an;
+                    if (vowels.Contains(char.ToLower(m.Type[0])) == true) an = "n";
+                    else an = "";
+                    Console.WriteLine($"is a{an} {m.Type.ToLower()} motorcycle.\n");
+                }
+            }
         }
     }
 }

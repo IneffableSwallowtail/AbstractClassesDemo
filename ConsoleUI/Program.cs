@@ -81,6 +81,11 @@ namespace ConsoleUI
                     Console.WriteLine($"is a{an} {m.Type.ToLower()} motorcycle.\n");
                 }
             }
+
+            car1.DriveAbstract();
+            car1.DriveVirtual();
+            motorcycle2.DriveAbstract();
+            motorcycle2.DriveVirtual();
         }
     }
 }

@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Schema;
 
 namespace ConsoleUI
 {
@@ -51,6 +52,11 @@ namespace ConsoleUI
             Console.ReadLine();
 
             List<Vehicle> vehicles = new List<Vehicle>();
+
+            Car car1 = new Car() { Make = "Chevrolet", Model = "Corvette", Doors = 2 };
+            Motorcycle motorcycle1 = new Motorcycle() { Make = "Harley-Davidson", Model = "Softail Standard", Year = 2015, Type = "Cruiser" };
+            Vehicle car2 = new Car() { Make = "Ford", Model = "F-150", Year = 2008, Doors = 4 };
+            Vehicle motorcycle2 = new Motorcycle() { Make = "Honda", Model = "CRF250F", Year = 2020, Type = "Off-road" };
         }
     }
 }

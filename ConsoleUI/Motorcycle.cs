@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsoleUI
 {
-    public class Motorcycle : Vehicle
+    internal class Motorcycle : Vehicle
     {
         public override void DriveAbstract()
         {
